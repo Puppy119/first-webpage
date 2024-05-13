@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - [Boutique Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:lightpink;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color:black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            color:white;
+        }
+
+        .review {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .review .name {
+            font-weight: bold;
+        }
+
+        .review .date {
+            font-style: italic;
+            color: #666;
+        }
+
+        .review .rating {
+            color: #f39c12;
+        }
+
+        .review .content {
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Reviews</h2>
+        
+        <!-- Existing Reviews -->
+        <div class="review">
+            <p class="name">Aditi</p>
+            <p class="date">Sept 11, 2023</p>
+            <p class="rating">★★★★☆</p>
+            <p class="content">I recently discovered Priya's Boutique and had the most wonderful shopping experience! From the moment I stepped into the boutique, I was greeted by friendly and knowledgeable staff who were eager to assist me.</p>
+        </div>
+
+        <div class="review">
+            <p class="name">Priyan</p>
+            <p class="date">May 5,2024</p>
+            <p class="rating">★★★★★</p>
+            <p class="content">I can't wait to visit Priya's Boutique again and explore their new arrivals. If you're looking for a boutique that offers exceptional service and a curated selection of fashion-forward pieces, I highly recommend Priya's Boutique!</p>
+        </div>
+
+        <!-- Review Submission Form -->
+        <h3>Leave a Review</h3>
+        <form action="submit_review.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
